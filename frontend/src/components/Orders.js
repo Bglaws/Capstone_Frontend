@@ -18,7 +18,7 @@ export default function Orders(props){
     useEffect(()=>{
         fetchOrder()
         console.log(result)
-    },[])
+    },[order])
 
     const result = order.length!==0? 
     order.map( order => <OrderCard key ={order.order_id} order={order} fetchOrder={fetchOrder}/>) :
